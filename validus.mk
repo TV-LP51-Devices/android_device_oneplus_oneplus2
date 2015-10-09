@@ -19,3 +19,8 @@ $(call inherit-product, vendor/validus/config/common_full_phone.mk)
 
 # Inherit oneplus2-specific vendor tree
 $(call inherit-product, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
+
+# Default.prop overrides to get adb working at boot   
+ADDITIONAL_DEFAULT_PROPERTIES += \
+		ro.secure=0 \
+		ro.adb.secure=0 \
