@@ -27,6 +27,13 @@ BOARD_VENDOR := oneplus
 # Validus additions
 BLOCK_BASED_OTA=false
 
+# Rom Toolchain
+#TARGET_GCC_VERSION_EXP := 4.9
+
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/aarch64/aarch64-linux-android-4.9-kernel/bin
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
 TARGET_NO_BOOTLOADER := true
@@ -64,7 +71,7 @@ BOARD_MKBOOTIMG_ARGS += --ramdisk_offset 0x01000000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8994
-TARGET_KERNEL_CONFIG := cm_oneplus2_defconfig
+TARGET_KERNEL_CONFIG := ak_OnePlus2_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 TARGET_CUSTOM_DTBTOOL := dtbToolOP2
