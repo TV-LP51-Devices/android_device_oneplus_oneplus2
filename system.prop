@@ -1,5 +1,7 @@
 # system.prop for OnePlus2
 
+ro.validus.device=oneplus2
+
 ro.build.product=OnePlus2
 ro.product.device=OnePlus2
 ro.build.description=OnePlus2-user 5.1.1 LMY47V 21 dev-keys
