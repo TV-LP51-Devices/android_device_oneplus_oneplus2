@@ -19,3 +19,7 @@ $(call inherit-product, vendor/validus/config/common_full_phone.mk)
 
 # Inherit oneplus2-specific vendor tree
 $(call inherit-product-if-exists, vendor/oneplus/oneplus2/oneplus2-vendor.mk)
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+   PRODUCT_NAME=oneplus2 BUILD_FINGERPRINT=OnePlus/OnePlus2/OnePlus2:6.0.1/MMB29M/2431559:userdebug/release-keys \
+   PRIVATE_BUILD_DESC="OnePlus2-userdebug 6.0.1 MMB29M dev-keys"
